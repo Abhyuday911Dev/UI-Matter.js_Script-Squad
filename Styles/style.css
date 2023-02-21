@@ -1,0 +1,30 @@
+/* @font-face {
+    font-family: gilroy;
+    src: url(./public/fonts/Gilroy-Regular.ttf)format("truetype");
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 18, 21);
+    scroll-behavior: smooth;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+}
+
+.slide{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 18, 21);
+}
