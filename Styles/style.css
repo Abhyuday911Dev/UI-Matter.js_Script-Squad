@@ -3,11 +3,16 @@
     src: url(../Assets/Gilroy-Regular.ttf)format("truetype");
 }
 
+@font-face {
+    font-family: p;
+    src: url(../Assets/Pleasure.woff2)format("truetype");
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: gilroy;
+    font-family: p;
 }
 
 html,
@@ -15,8 +20,12 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: rgb(15, 18, 21);
-    color: #bcbcbc;
+    color: #ebe9e9;
     scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
 }
 
 #main {
@@ -27,19 +36,18 @@ body {
 .slide {
     height: 100vh;
     width: 100%;
-    background-color: rgb(15, 18, 21);
+    background-color: #161617;
 }
 
 nav {
     height: 70px;
     width: 100%;
-    background-color: #0c0c0c79;
+    background-color: #0c0c0c15;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    backdrop-filter: 5px;
-
+    padding: 50px 30px 20px 30px;
+    backdrop-filter: blur(10px);
 }
 
 #navright ul {
@@ -55,14 +63,14 @@ li {
 }
 
 a {
-    color: #bcbcbc;
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .center a:visited {
-    color: #bcbcbc;
+    color: #e0e0e0;
     text-decoration: none;
 }
 
@@ -71,18 +79,61 @@ a {
     transform: scale(1.1);
 }
 
-.liend{
+.liend {
     margin-right: 30px;
 }
 
-li button{
+li button {
     font-size: 20px;
     font-weight: 700;
-    padding: 5px 10px;
+    padding: 4px 10px;
     border-radius: 5px;
+    font-family: gilroy;
 }
 
-.libtn{
+.libtn {
     margin-right: 0 !important;
+}
 
+#punch {
+    width: 100%;
+    min-height: 50%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 6vh 3vw;
+}
+
+#punchline {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+#punchline h1 {
+    font-size: 6.5vmax;
+    line-height: 7vmax;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-variation-settings: "TRAP" 90;
+}
+
+#hirebtn {
+    font-size: 15px;
+    font-weight: 550;
+    padding: 20px 25px;
+    border-radius: 40px;
+    background-color: #FFD600;
+    display: flex;
+}
+
+.hirearrow{
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.semisvg{
+    width: 2vmax;
+    margin-left: -20px;
+    margin-bottom: -5px;
 }
