@@ -22,6 +22,8 @@ body {
     background-color: rgb(15, 18, 21);
     color: #ebe9e9;
     scroll-behavior: smooth;
+    overflow: hidden;
+    /* temporary overflows */
 }
 
 button {
@@ -37,6 +39,10 @@ button {
     height: 100vh;
     width: 100%;
     background-color: #161617;
+}
+
+#slide1{
+    position: relative;
 }
 
 nav {
@@ -86,13 +92,22 @@ a {
 li button {
     font-size: 20px;
     font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 5px;
+    padding: 4px 12px;
+    border-radius: 5px 15px 5px 5px;
     font-family: gilroy;
+    background-color: #FFD600;
+    display: flex;
+    align-items: center;
 }
+
+li button i {
+    margin-left: 5px;
+}
+
 
 .libtn {
     margin-right: 0 !important;
+    
 }
 
 #punch {
@@ -101,7 +116,7 @@ li button {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    padding: 6vh 3vw;
+    padding: 9vh 3vw 6vh 3vw;
 }
 
 #punchline {
@@ -122,6 +137,7 @@ li button {
     font-size: 15px;
     font-weight: 550;
     padding: 20px 25px;
+    margin-left: -3px;
     border-radius: 40px;
     background-color: #FFD600;
     display: flex;
@@ -136,4 +152,15 @@ li button {
     width: 2vmax;
     margin-left: -20px;
     margin-bottom: -5px;
+}
+
+#slide1 h6{
+    margin-left: 6vh;
+    font-size: 15px;
+    position: absolute;
+    bottom: 35px;
+}
+
+.yellowarrow{
+    color: #FFD600;
 }
