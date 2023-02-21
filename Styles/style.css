@@ -33,17 +33,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #555;
+    background: #303030;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #1a1a1a;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #333;
+    background: #1b1b1b;
 }
 
 button {
@@ -68,7 +68,7 @@ button {
 nav {
     height: 70px;
     width: 100%;
-    background-color: #0c0c0c15;
+    /* background-color: #0c0c0c15; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -175,7 +175,7 @@ li button i {
 }
 
 #slide1 h6 {
-    margin-left: 6vh;
+    margin-left: 3vw;
     font-size: 15px;
     position: absolute;
     bottom: 35px;
@@ -183,4 +183,5 @@ li button i {
 
 .yellowarrow {
     color: #FFD600;
+    margin-right: 3px;
 }
