@@ -22,8 +22,28 @@ body {
     background-color: rgb(15, 18, 21);
     color: #ebe9e9;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
     /* temporary overflows */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* display: none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
 }
 
 button {
@@ -31,7 +51,7 @@ button {
 }
 
 #main {
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -41,7 +61,7 @@ button {
     background-color: #161617;
 }
 
-#slide1{
+#slide1 {
     position: relative;
 }
 
@@ -107,7 +127,7 @@ li button i {
 
 .libtn {
     margin-right: 0 !important;
-    
+
 }
 
 #punch {
@@ -143,24 +163,24 @@ li button i {
     display: flex;
 }
 
-.hirearrow{
+.hirearrow {
     margin-left: 10px;
     font-weight: 600;
 }
 
-.semisvg{
+.semisvg {
     width: 2vmax;
     margin-left: -20px;
     margin-bottom: -5px;
 }
 
-#slide1 h6{
+#slide1 h6 {
     margin-left: 6vh;
     font-size: 15px;
     position: absolute;
     bottom: 35px;
 }
 
-.yellowarrow{
+.yellowarrow {
     color: #FFD600;
 }
