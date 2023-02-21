@@ -12,19 +12,77 @@
 
 html,
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgb(15, 18, 21);
+    color: #bcbcbc;
     scroll-behavior: smooth;
 }
 
-#main{
-    height: 100%;
+#main {
+    min-height: 100%;
     width: 100%;
 }
 
-.slide{
-    height: 100%;
+.slide {
+    height: 100vh;
     width: 100%;
     background-color: rgb(15, 18, 21);
+}
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: #0c0c0c79;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    backdrop-filter: 5px;
+
+}
+
+#navright ul {
+    display: flex;
+    align-items: center;
+}
+
+
+li {
+    list-style: none;
+    font-weight: 500;
+    margin: 0 25px 0 0;
+}
+
+a {
+    color: #bcbcbc;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.center a:visited {
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.center a:hover {
+    /* color: rgb(254, 208, 123); */
+    transform: scale(1.1);
+}
+
+.liend{
+    margin-right: 30px;
+}
+
+li button{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.libtn{
+    margin-right: 0 !important;
+
 }
