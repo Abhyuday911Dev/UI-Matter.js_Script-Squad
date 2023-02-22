@@ -19,11 +19,18 @@ html,
 body {
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(15, 18, 21);
+    background-color: #161617;
     color: #ebe9e9;
     scroll-behavior: smooth;
     overflow-x: hidden;
     /* temporary overflows */
+}
+
+/* delete krna hai ye canva ka tarika  */
+canvas{
+    height: 99vh ;
+    width: 100%;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -53,12 +60,21 @@ button {
 #main {
     min-height: 100vh;
     width: 100%;
+    position: relative;
+}
+
+#mainelements {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    pointer-events: none;
 }
 
 .slide {
     height: 100vh;
     width: 100%;
-    background-color: #161617;
 }
 
 #slide1 {
@@ -151,6 +167,10 @@ li button i {
     font-weight: 600;
     letter-spacing: 5px;
     font-variation-settings: "TRAP" 90;
+}
+
+#punchline em {
+    font-style: normal;
 }
 
 #hirebtn {
