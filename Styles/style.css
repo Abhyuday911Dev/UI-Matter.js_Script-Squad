@@ -221,11 +221,154 @@ button:active {
     color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width:500px){
+
+/* _____________________________last section______________________________ */
+
+#contactslide {
+    position: relative;
+}
+
+#contact {
+    position: absolute;
+    bottom: 0%;
+    height: 74.5vh;
+    border-radius: 140px 140px 0 0;
+    width: 100%;
+    padding: 60px 60px 60px 60px;
+    background-color: #ffffff39;
+    pointer-events: all;
+    border: 30px #222222 solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-left{
+    width: 57%;
+    background-color: #ffffff15;
+    padding: 15px;
+    border-radius: 35px;
+    border: 10px #1b1b1b19 solid;
+    height: 53vh;
+}
+
+#contact-right{
+    width: 40%;
+    background-color: #ffffff15;
+    padding: 25px;
+    border-radius: 35px;
+    border: 10px #1b1b1b19 solid;
+}
+
+#contact-right h3{
+    padding-bottom: 5%;
+}
+
+#teampng{
+    width: 100%;
+    height: 80%;
+    filter: grayscale(60%) brightness(50%);
+    border-radius: 17px;
+    border: 7px solid #1b1b1b19;
+    object-position: top;
+    object-fit: cover;
+    opacity: 0.79;
+}
+
+#contact h1 {
+    font-size: 4.5vmax;
+}
+
+#hippobtn {
+    width: 242px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: all;
+    margin-top: 40px;
+}
+
+.ear-left-outer,
+.ear-right-outer {
+    fill: #919191;
+}
+
+.ear-left-inner,
+.ear-right-inner {
+    fill: #6D6D6D;
+}
+
+.eye-right-outer,
+.eye-left-outer,
+.nostril-right-outer,
+.nostril-left-outer,
+.body {
+    fill: #AAAAAA;
+}
+
+.eye-right-inner,
+.eye-left-inner {
+    fill: #FFFFFF;
+}
+
+.nostril-right-inner,
+.nostril-left-inner {
+    fill: #8C8C8C;
+}
+
+.freckle {
+    fill: #7C7C7C;
+}
+
+.tongue {
+    fill: #FF4848;
+}
+
+.tooth-left,
+.tooth-right {
+    fill: #FFFFE1;
+}
+
+.link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffe3;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #335067;
+    padding: 10px 14px;
+    border-radius: 4px;
+    /* transition: background 0.2s; */
+}
+
+.link:hover {
+    background: #243a4a;
+}
+
+
+@media screen and (max-width:500px) {
     #slide1 h6 {
         margin-left: 3vw;
         font-size: 15px;
         position: absolute;
         bottom: 20%;
+    }
+
+    .dnone {
+        display: none;
+        white-space: nowrap;
+
+    }
+
+    .libtn {
+        white-space: nowrap;
+    }
+
+    #navright ul {
+        margin-left: 0px;
+        margin-block-end: 0px;
     }
 }

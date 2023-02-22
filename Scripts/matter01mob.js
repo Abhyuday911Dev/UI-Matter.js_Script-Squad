@@ -93,7 +93,15 @@ let render = Render.create({
 //screen bounds/walls
 Composite.add(engine.world, [
   //   Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
-  Bodies.rectangle(innerw / 2, innerh * 5, innerw, 50, { isStatic: true }),
+  //   bottom
+  Bodies.rectangle(
+    innerw / 2,
+    innerh * 4 + innerh / 4 + (innerh - innerh / 4) / 2 + 10,
+    innerw,
+    innerh - innerh / 4,
+    { isStatic: true, chamfer: { radius: [150, 150, 0, 0] } }
+  ),
+   //   left right
   Bodies.rectangle(innerw, (innerh * 5) / 2 + 550, 5, innerh * 5 - 500, {
     isStatic: true,
   }),
