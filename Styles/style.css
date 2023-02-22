@@ -210,3 +210,12 @@ li button i {
     color: #FFD600;
     margin-right: 3px;
 }
+
+button {
+    color: black;
+  }
+  
+  button:hover,
+  button:active {
+    color: rgb(0, 0, 0);
+  }
