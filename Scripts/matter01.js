@@ -27,6 +27,7 @@ function isMobileDevice() {
 }
 
 if (isMobileDevice()) {
+    alert("hello")
     function isMobileDevice() {
         return (
           typeof window.orientation !== "undefined" ||
