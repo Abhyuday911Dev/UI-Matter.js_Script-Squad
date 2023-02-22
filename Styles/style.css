@@ -26,11 +26,10 @@ body {
     /* temporary overflows */
 }
 
-/* delete krna hai ye canva ka tarika  */
-canvas{
-    height: 99vh ;
+#canvaparent{
+    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    
 }
 
 ::-webkit-scrollbar {
@@ -53,6 +52,11 @@ canvas{
     background: #1b1b1b;
 }
 
+/* delete krna hai ye canva ka tarika  */
+canvas{
+    overflow: hidden;
+}
+
 button {
     cursor: pointer;
 }
@@ -64,7 +68,7 @@ button {
 }
 
 #mainelements {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
     position: absolute;
     top: 0%;

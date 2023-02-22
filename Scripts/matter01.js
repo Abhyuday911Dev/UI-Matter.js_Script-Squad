@@ -67,7 +67,7 @@ let render = Render.create({
     background: "transparent",
     wireframes: false,
     width: innerw,
-    height: innerh,
+    height: innerh + innerh,
   },
 });
 
@@ -126,10 +126,10 @@ var constraint = Constraint.create({
 
 Composite.add(engine.world, [constraint, rock]);
 
-var body = Bodies.polygon(400, 100, 4, 30);
+var body = Bodies.polygon(innerw/3, 100, 4, 30);
 
 var constraint1 = Constraint.create({
-  pointA: { x: 400, y: 120 },
+  pointA: { x: innerw/3, y: 120 },
   bodyB: body,
   pointB: { x: -10, y: -10 },
   stiffness: 0.01,
@@ -159,7 +159,34 @@ let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
 });
 
 // add all of the bodies to the world
-Composite.add(engine.world, [ground]);
+// Composite.add(engine.world, [ground]);
+
+// ________________________new codes____________________________
+
+
+var body = Bodies.polygon(innerw/1.2, innerh/1.5, 4,40, {density: 1,});
+
+var constraint1 = Constraint.create({
+  pointA: { x: innerw/1.25, y: innerh/1.9 },
+  bodyB: body,
+  pointB: { x: -10, y: -10 },
+  stiffness: 0.01,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body, constraint1]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 // run the renderer
 Render.run(render);
