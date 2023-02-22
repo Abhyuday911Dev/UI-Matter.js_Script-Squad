@@ -54,11 +54,19 @@
   <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>
   <script>
-    if (screen.width < screen.height) {
-      alert("hua")
+    // if (screen.width < screen.height) {
+    //   // alert("hua")
+    //   document.querySelector('#mobcheck').href = './Scripts/matter01mob.js';
+
+    // };
+
+    function isMobileDevicee() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    if (isMobileDevicee()) {
       document.querySelector('#mobcheck').href = './Scripts/matter01mob.js';
-      
-    };
+    }
   </script>
   <script id="mobcheck" src="./Scripts/matter01.js"></script>
   <!-- <script src="./Scripts/matter02.js"></script> -->
