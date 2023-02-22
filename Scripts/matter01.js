@@ -1,6 +1,6 @@
 const canvas = document.querySelector("#canvas");
 // const addBtn = document.querySelector(".addbtn");
-// const shootbtn = document.querySelector(".shoot");
+const shootbtn = document.querySelector(".shootbtn");
 const main = document.getElementById("main");
 let intervalRunning = false;
 let intervalRunning2 = false;
@@ -19,17 +19,24 @@ let Engine = Matter.Engine,
   Mouse = Matter.Mouse,
   MouseConstraint = Matter.MouseConstraint;
 
-// shootbtn.addEventListener("click", (params) => {
-//   if (intervalRunning) {
-//     clearInterval(intervalId1);
-//     intervalRunning = false;
-//   } else {
-//     intervalId1 = setInterval(shoot, 60);
-//     intervalRunning = true;
-//   }
-// });
-
-
+shootbtn.addEventListener("mouseenter", (params) => {
+  if (intervalRunning) {
+    clearInterval(intervalId1);
+    intervalRunning = false;
+  } else {
+    intervalId1 = setInterval(shoot, 60);
+    intervalRunning = true;
+  }
+});
+shootbtn.addEventListener("mouseleave", (params) => {
+  if (intervalRunning) {
+    clearInterval(intervalId1);
+    intervalRunning = false;
+  } else {
+    intervalId1 = setInterval(shoot, 60);
+    intervalRunning = true;
+  }
+});
 
 document.addEventListener("visibilitychange", function () {
   if (document.hidden) {
@@ -37,12 +44,12 @@ document.addEventListener("visibilitychange", function () {
     intervalRunning = false;
     clearInterval(intervalId2);
     intervalRunning2 = false;
-    console.log("if chala")
+    console.log("if chala");
   } else {
     clearInterval(intervalId2);
     intervalId2 = setInterval(createobj, 1000);
     intervalRunning2 = true;
-    console.log("elsechala")
+    console.log("elsechala");
   }
 });
 
@@ -126,10 +133,10 @@ var constraint = Constraint.create({
 
 Composite.add(engine.world, [constraint, rock]);
 
-var body = Bodies.polygon(innerw/3, 100, 4, 30);
+var body = Bodies.polygon(innerw / 3, 100, 4, 30);
 
 var constraint1 = Constraint.create({
-  pointA: { x: innerw/3, y: 120 },
+  pointA: { x: innerw / 3, y: 120 },
   bodyB: body,
   pointB: { x: -10, y: -10 },
   stiffness: 0.01,
@@ -163,11 +170,10 @@ let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
 
 // ________________________new codes____________________________
 
-
-var body = Bodies.polygon(innerw/1.2, innerh/1.5, 4,40, {density: 1,});
+var body = Bodies.polygon(innerw / 1.2, innerh / 1.5, 4, 40, { density: 1 });
 
 var constraint1 = Constraint.create({
-  pointA: { x: innerw/1.25, y: innerh/1.9 },
+  pointA: { x: innerw / 1.25, y: innerh / 1.9 },
   bodyB: body,
   pointB: { x: -10, y: -10 },
   stiffness: 0.01,
@@ -175,18 +181,6 @@ var constraint1 = Constraint.create({
 });
 
 Composite.add(engine.world, [body, constraint1]);
-
-
-
-
-
-
-
-
-
-
-
-
 
 // run the renderer
 Render.run(render);

@@ -185,6 +185,7 @@ li button i {
     border-radius: 40px;
     background-color: #FFD600;
     display: flex;
+    pointer-events: all;
 }
 
 .hirearrow {
