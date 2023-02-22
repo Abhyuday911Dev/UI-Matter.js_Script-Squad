@@ -6,6 +6,8 @@ let intervalRunning = false;
 let intervalRunning2 = false;
 var intervalId1;
 var intervalId2;
+
+alert("gay")
 // canvas configuration
 // module aliases
 var Engine = Matter.Engine,
@@ -243,7 +245,7 @@ var constraint2 = Constraint.create({
   damping: 0.05,
 });
 
-Composite.add(engine.world, [body, constraint1, constraint2]);
+Composite.add(engine.world, [body]);
 
 // ___________________________________card2_____________________________________
 
@@ -411,18 +413,3 @@ mouseConstraint.mouse.element.removeEventListener(
 );
 
 Composite.add(engine.world, mouseConstraint);
-
-// resize handler
-window.addEventListener('resize', function() {
-    // update renderer canvas size
-    render.canvas.width = window.innerWidth - 7;
-    render.canvas.height = window.innerHeight * 5;
-    render.bounds.max.x = window.innerWidth;
-    render.bounds.max.y = window.innerHeight;
-
-    // update engine bounds
-    Matter.Bounds.update(engine.bounds, render.bounds);
-
-    // update renderer
-    Matter.Render.tick(render);
-});

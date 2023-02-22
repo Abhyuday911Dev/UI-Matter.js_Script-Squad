@@ -411,18 +411,3 @@ mouseConstraint.mouse.element.removeEventListener(
 );
 
 Composite.add(engine.world, mouseConstraint);
-
-// resize handler
-window.addEventListener('resize', function() {
-    // update renderer canvas size
-    render.canvas.width = window.innerWidth - 7;
-    render.canvas.height = window.innerHeight * 5;
-    render.bounds.max.x = window.innerWidth;
-    render.bounds.max.y = window.innerHeight;
-
-    // update engine bounds
-    Matter.Bounds.update(engine.bounds, render.bounds);
-
-    // update renderer
-    Matter.Render.tick(render);
-});
