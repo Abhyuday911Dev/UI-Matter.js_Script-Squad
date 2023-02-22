@@ -91,11 +91,19 @@ let render = Render.create({
 //screen bounds/walls
 Composite.add(engine.world, [
   //   Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
-  Bodies.rectangle(innerw / 2, innerh * 5, innerw, 50, { isStatic: true }),
-  Bodies.rectangle(innerw, (innerh * 5) / 2 + 500, 5, innerh * 5 - 500, {
+  //   bottom
+  Bodies.rectangle(
+    innerw / 2,
+    innerh * 4 + innerh / 4 + (innerh - innerh / 4) / 2 + 10,
+    innerw,
+    innerh - innerh / 4,
+    { isStatic: true, chamfer: { radius: [150, 150, 0, 0] } }
+  ),
+  //   left right
+  Bodies.rectangle(innerw, (innerh * 5) / 2 - (innerh - innerh / 2), 5, innerh * 5 - 500, {
     isStatic: true,
   }),
-  Bodies.rectangle(0, (innerh * 5) / 2, 5, innerh * 5 - 500, {
+  Bodies.rectangle(0, (innerh * 5) / 2 - (innerh - innerh / 2) , 5, innerh * 5 - 500, {
     isStatic: true,
   }),
 ]);
@@ -378,7 +386,8 @@ var constraint2 = Constraint.create({
 
 Composite.add(engine.world, [body4, constraint1, constraint2]);
 
-// ________________________new codes____________________________
+// ________________________last page____________________________
+
 // ________________________new codes____________________________
 // ________________________new codes____________________________
 
