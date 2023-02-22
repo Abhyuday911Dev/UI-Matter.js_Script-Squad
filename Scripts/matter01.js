@@ -38,6 +38,16 @@ shootbtn.addEventListener("mouseleave", (params) => {
   }
 });
 
+shootbtn.addEventListener("touchend", (params) => {
+    if (intervalRunning) {
+      clearInterval(intervalId1);
+      intervalRunning = false;
+    } else {
+      intervalId1 = setInterval(shoot, 60);
+      intervalRunning = true;
+    }
+  });
+
 document.addEventListener("visibilitychange", function () {
   if (document.hidden) {
     clearInterval(intervalId1);
@@ -47,13 +57,13 @@ document.addEventListener("visibilitychange", function () {
     console.log("if chala");
   } else {
     clearInterval(intervalId2);
-    intervalId2 = setInterval(createobj, 1000);
+    intervalId2 = setInterval(createobj, 800);
     intervalRunning2 = true;
     console.log("elsechala");
   }
 });
 
-intervalId2 = setInterval(createobj, 1000);
+intervalId2 = setInterval(createobj, 800);
 intervalRunning2 = true;
 
 // window.innerWidth - scroller width
@@ -74,14 +84,14 @@ let render = Render.create({
     background: "transparent",
     wireframes: false,
     width: innerw,
-    height: innerh + innerh,
+    height: innerh * 5,
   },
 });
 
 // create object function
 function createobj() {
   let box = Bodies.circle(
-    Math.random() * (innerw - innerw / 3) + innerw / 3 - 40,
+    Math.random() * (innerw - innerw / 3) + innerw / 5 - 40,
     0,
     40,
     {
@@ -96,14 +106,6 @@ function createobj() {
   );
   Composite.add(engine.world, [box]);
 }
-
-// if (intervalRunning2) {
-//   clearInterval(intervalId2);
-//   intervalRunning2 = false;
-// } else {
-//   intervalId2 = setInterval(createobj, 1000);
-//   intervalRunning2 = true;
-// }
 
 const functionName = () => {
   var body = Bodies.circle(280, 100, 3, 30);
@@ -156,8 +158,6 @@ function shoot() {
   constraint.bodyB = rock;
 }
 
-// addBtn.addEventListener("click", createobj);
-
 // create two boxes and a ground
 let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
   isStatic: true,
@@ -168,6 +168,8 @@ let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
 // add all of the bodies to the world
 // Composite.add(engine.world, [ground]);
 
+// ________________________new codes____________________________
+// ________________________new codes____________________________
 // ________________________new codes____________________________
 
 var body = Bodies.polygon(innerw / 1.2, innerh / 1.5, 4, 40, { density: 1 });
@@ -181,6 +183,167 @@ var constraint1 = Constraint.create({
 });
 
 Composite.add(engine.world, [body, constraint1]);
+
+var body = Bodies.rectangle(innerw / 3.5 + 5, innerh + 150 + 50, 350, 20, {
+  restitution: 0.5,
+  density: 0.2,
+});
+var body1 = Bodies.rectangle(innerw / 3.5 + 10, innerh + 150, 205, 20, {
+  restitution: 0.5,
+  density: 0.2,
+});
+
+Composite.add(engine.world, [body, body1]);
+
+// ___________________________________card1_____________________________________
+
+var body = Bodies.rectangle(
+  innerw / 3.5,
+  innerh + 150 + innerh / 2.5 - 40,
+  355,
+  405,
+  {
+    density: 0.03,
+  }
+);
+
+var constraint1 = Constraint.create({
+  pointA: { x: innerw / 3.5 - 355 / 2, y: innerh + innerh / 9 },
+  bodyB: body,
+  pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+var constraint2 = Constraint.create({
+  pointA: { x: innerw / 3.5 + 355 / 2, y: innerh + innerh / 9 },
+  bodyB: body,
+  pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body, constraint1, constraint2]);
+
+// ___________________________________card2_____________________________________
+
+var body = Bodies.rectangle(
+  innerw - innerw / 3.5,
+  innerh + 150 + innerh / 2.5 - 40 + innerh / 4,
+  355,
+  405,
+  {
+    density: 0.03,
+  }
+);
+
+var constraint1 = Constraint.create({
+  // pointA: { x: innerw - (innerw / 3.5 - 355 / 2 + 300), y: innerh + innerh / 9 },
+  pointA: {
+    x: innerw - innerw / 3.5 - 355 / 2,
+    y: innerh + innerh / 9 + innerh / 4,
+  },
+  bodyB: body,
+  pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+var constraint2 = Constraint.create({
+  pointA: {
+    x: innerw - innerw / 3.5 + 355 / 2,
+    y: innerh + innerh / 9 + innerh / 4,
+  },
+  bodyB: body,
+  pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body, constraint1, constraint2]);
+
+// ___________________________________card3_____________________________________
+
+var body = Bodies.rectangle(
+  innerw / 3.5,
+  innerh + 150 + innerh / 2.5 - 40 + 405 + 150,
+  355,
+  405,
+  {
+    density: 0.03,
+  }
+);
+
+var c3constraint1 = Constraint.create({
+  pointA: { x: innerw / 3.5 - 355 / 2, y: innerh + innerh / 9 + 405 + 150 },
+  bodyB: body,
+  pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+var c3constraint2 = Constraint.create({
+  pointA: { x: innerw / 3.5 + 355 / 2, y: innerh + innerh / 9 + 405 + 150 },
+  bodyB: body,
+  pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body, c3constraint1, c3constraint2]);
+
+// ___________________________________card4_____________________________________
+
+
+var body = Bodies.rectangle(innerw / 3.5 + 5, innerh + 150 + 50 + 405 + 150, 350, 20, {
+  restitution: 0.5,
+  density: 0.2,
+});
+var body1 = Bodies.rectangle(innerw / 3.5 + 50, innerh + 150 + 405 + 150, 205, 20, {
+  restitution: 0.5,
+  density: 0.2,
+});
+
+Composite.add(engine.world, [body, body1]);
+
+var body4 = Bodies.rectangle(
+  innerw - innerw / 3.5,
+  innerh + 150 + innerh / 2.5 - 40 + innerh / 4 + 405 + 150,
+  355,
+  405,
+  {
+    density: 0.03,
+  }
+);
+
+var constraint1 = Constraint.create({
+  // pointA: { x: innerw - (innerw / 3.5 - 355 / 2 + 300), y: innerh + innerh / 9 },
+  pointA: {
+    x: innerw - innerw / 3.5 - 355 / 2,
+    y: innerh + innerh / 9 + innerh / 4 + 405 + 150,
+  },
+  bodyB: body4,
+  pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+var constraint2 = Constraint.create({
+  pointA: {
+    x: innerw - innerw / 3.5 + 355 / 2,
+    y: innerh + innerh / 9 + innerh / 4 + 405 + 150,
+  },
+  bodyB: body4,
+  pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body4, constraint1, constraint2]);
+
+// ________________________new codes____________________________
+// ________________________new codes____________________________
+// ________________________new codes____________________________
 
 // run the renderer
 Render.run(render);

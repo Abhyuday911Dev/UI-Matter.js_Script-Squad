@@ -86,13 +86,13 @@ button {
 }
 
 nav {
-    height: 70px;
+    /* height: 70px; */
     width: 100%;
     /* background-color: #0c0c0c15; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 30px 20px 30px;
+    padding: 25px 30px 20px 30px;
     backdrop-filter: blur(10px);
 }
 
@@ -156,7 +156,7 @@ li button i {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    padding: 9vh 3vw 6vh 3vw;
+    padding: 5vh 3vw 6vh 3vw;
 }
 
 #punchline {
