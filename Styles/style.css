@@ -242,28 +242,28 @@ button:active {
     justify-content: space-between;
 }
 
-#contact-left{
-    width: 57%;
+#contact-left {
+    /* width: 57%; */
     background-color: #ffffff15;
     padding: 15px;
     border-radius: 35px;
-    border: 10px #1b1b1b19 solid;
+    border: 15px #1b1b1b19 solid;
     height: 53vh;
 }
 
-#contact-right{
-    width: 40%;
+#contact-right {
+    min-width: 40%;
     background-color: #ffffff15;
     padding: 25px;
     border-radius: 35px;
     border: 10px #1b1b1b19 solid;
 }
 
-#contact-right h3{
+#contact-right h3 {
     padding-bottom: 5%;
 }
 
-#teampng{
+#teampng {
     width: 100%;
     height: 80%;
     filter: grayscale(60%) brightness(50%);
@@ -371,4 +371,34 @@ button:active {
         margin-left: 0px;
         margin-block-end: 0px;
     }
+
+    #contact {
+        padding: 0px;
+        border-radius: 60px 60px 0 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #contact-left {
+        /* width: 57%; */
+        background-color: #ffffff15;
+        padding: 15px;
+        border-radius: 35px;
+        border: 15px #1b1b1b19 solid;
+        height: 41vh;
+    }
+
+    #hippobtn{
+        margin-top: 20px;
+    }
+
+    #teampng{
+        height: 60%;
+    }
+
+    #contact-right {
+        padding: 5px 25px 0px 25px;
+        height: 35%;
+    }
+
 }

@@ -99,7 +99,7 @@ Composite.add(engine.world, [
     innerh * 4 + innerh / 4 + (innerh - innerh / 4) / 2 + 10,
     innerw,
     innerh - innerh / 4,
-    { isStatic: true, chamfer: { radius: [150, 150, 0, 0] } }
+    { isStatic: true, chamfer: { radius: [60, 60, 0, 0] } }
   ),
    //   left right
   Bodies.rectangle(innerw, (innerh * 5) / 2 + 550, 5, innerh * 5 - 500, {
