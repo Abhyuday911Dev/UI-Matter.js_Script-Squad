@@ -405,7 +405,7 @@ Composite.add(engine.world, [body, c3constraint1,c3constraint2]);
 
 var body4 = Bodies.rectangle(
   innerw / 2 + 7 / 2,
-  innerh * 3 + innerh/5 -70 -70 -70,
+  innerh * 3 + innerh/5 -70 -70 -70 + 110,
   355,
   405,
   {
