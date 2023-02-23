@@ -424,8 +424,13 @@ var body4 = Bodies.rectangle(
   innerw - innerw/2.5,
   innerw/8,
   {
-    density: 0.025,
+    density: 0.055,
     chamfer: { radius: 15 },
+    render: {
+      sprite: {
+        texture: "../Assets/d1.png",
+      },
+    },
   }
 );
 
@@ -442,7 +447,7 @@ var body4 = Bodies.rectangle(
 
 var constraint2 = Constraint.create({
   pointA: {
-    x: innerw - innerw/5 - (innerw - innerw/5)/2 -innerw/10,
+    x: innerw - innerw/5 - (innerw - innerw/5)/2 -innerw/30,
     y: 2 * innerh + innerh / 9 + innerh / 4 + 405 + 150,
   },
   bodyB: body4,
@@ -457,12 +462,17 @@ Composite.add(engine.world, [body4, constraint2]);
 
 var body4 = Bodies.rectangle(
   innerw - innerw/10,
-  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150+  innerh / 4 ,
+  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 80+  innerh / 4 ,
   innerw - innerw/2.5,
   innerh/6,
   {
     density: 0.025,
     chamfer: { radius: 15 },
+    render: {
+      sprite: {
+        texture: "../Assets/d2.png",
+      },
+    },
   }
 );
 

@@ -96,6 +96,18 @@ nav {
     backdrop-filter: blur(10px);
 }
 
+#fontgil{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #FFD600;
+    font-weight: 800;
+    line-height: 30px;
+    padding: 0 5px;
+    border-right: 3px solid #FFD600;
+    border-left: 3px solid #FFD600;
+    border-bottom: 2px solid #FFD600;
+    border-radius: 5px;
+}
+
 #navright ul {
     display: flex;
     align-items: center;
