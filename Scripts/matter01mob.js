@@ -339,6 +339,11 @@ var body = Bodies.rectangle(
   {
     density: 0.03,
     chamfer: { radius: 15 },
+    render: {
+      sprite: {
+        texture: "../Assets/c2.png",
+      },
+    },
   }
 );
 
@@ -370,6 +375,11 @@ var body = Bodies.rectangle(
   {
     density: 0.03,
     chamfer: { radius: 15 },
+    render: {
+      sprite: {
+        texture: "../Assets/c3.png",
+      },
+    },
   }
 );
 
@@ -401,6 +411,11 @@ var body4 = Bodies.rectangle(
   {
     density: 0.03,
     chamfer: { radius: 15 },
+    render: {
+      sprite: {
+        texture: "../Assets/c4.png",
+      },
+    },
     // chamfer: { radius: [150, 20, 40, 20] }
   }
 );
