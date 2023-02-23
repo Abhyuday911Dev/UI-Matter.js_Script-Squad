@@ -235,7 +235,7 @@ Composite.add(engine.world, [body4, constraint2]);
 var body4 = Bodies.rectangle(
   (innerw - innerw/2.5)/2,
   innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150 + innerh / 4 + innerh/3 + innerh/12,
-  innerw - innerw/2.5,
+  innerw - innerw/2,
   innerh/12,
   {
     density: 0.025,
@@ -333,7 +333,7 @@ Composite.add(engine.world, [body, constraint1, constraint2]);
 
 var body = Bodies.rectangle(
   innerw / 2 + 7 / 2,
-  innerh + 150 + innerh / 2.5 - 40 + innerh / 4 -70,
+  innerh + 150 + innerh / 2.5 - 40 + innerh / 4 -70 +30,
   355,
   405,
   {
