@@ -304,6 +304,11 @@ Composite.add(engine.world, [body, constraint1]);
 var body = Bodies.rectangle(innerw / 2 + 7 / 2, innerh + 70, 355, 405, {
   density: 0.03,
   chamfer: { radius: 15 },
+  render: {
+    sprite: {
+      texture: "../Assets/c1.png",
+    },
+  },
 });
 
 var constraint1 = Constraint.create({
