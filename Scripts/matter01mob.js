@@ -369,7 +369,7 @@ Composite.add(engine.world, [body, constraint1, constraint2]);
 
 var body = Bodies.rectangle(
   innerw / 2 ,
-  innerh  + innerh + innerh/2 -70 -70,
+  innerh  + innerh + innerh/2 -70 -70 +70,
   355,
   405,
   {
