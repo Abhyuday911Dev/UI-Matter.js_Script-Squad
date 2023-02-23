@@ -102,7 +102,7 @@ Composite.add(engine.world, [
   //   left right
   Bodies.rectangle(
     innerw,
-    (innerh * 5) / 2 - (innerh - innerh / 2),
+    (innerh * 5) / 2 - (innerh - innerh / 2) * 1.7,
     5,
     innerh * 5 - 500,
     {
@@ -111,7 +111,7 @@ Composite.add(engine.world, [
   ),
   Bodies.rectangle(
     0,
-    (innerh * 5) / 2 - (innerh - innerh / 2),
+    (innerh * 5) / 2 - (innerh - innerh / 2) * 1.5,
     5,
     innerh * 5 - 500,
     {
@@ -427,6 +427,43 @@ var constraint2 = Constraint.create({
   },
   bodyB: body4,
   pointB: { x: -20 , y: -innerw/16 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body4, constraint2]);
+
+// ________________________part 2______________________________
+
+var body4 = Bodies.rectangle(
+  innerw - innerw/10,
+  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150+  innerh / 4 ,
+  innerw - innerw/2.5,
+  innerh/6,
+  {
+    density: 0.025,
+    chamfer: { radius: 15 },
+  }
+);
+
+// var constraint1 = Constraint.create({
+//   pointA: {
+//     x: innerw/10 -30 ,
+//     y: innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150,
+//   },
+//   bodyB: body4,
+//   pointB: { x: - (innerw - innerw/5)/2 + 30, y: -innerw/16 },
+//   stiffness: 0.001,
+//   damping: 0.05,
+// });
+
+var constraint2 = Constraint.create({
+  pointA: {
+    x: innerw  - (innerw - innerw/2.5)/2 ,
+    y: 2 * innerh + innerh / 9 + innerh / 2 + 405 + 150,
+  },
+  bodyB: body4,
+  pointB: { x: 20 , y: -40},
   stiffness: 0.001,
   damping: 0.05,
 });
