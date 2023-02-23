@@ -101,7 +101,7 @@ Composite.add(engine.world, [
     innerh - innerh / 4,
     { isStatic: true, chamfer: { radius: [60, 60, 0, 0] } }
   ),
-   //   left right
+  //   left right
   Bodies.rectangle(innerw, (innerh * 5) / 2 + 550, 5, innerh * 5 - 500, {
     isStatic: true,
   }),
@@ -196,10 +196,10 @@ let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
 // ________________________second last page____________________________
 
 var body4 = Bodies.rectangle(
-  (innerw - innerw/2.5)/2,
-  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150 + innerh / 4 ,
-  innerw - innerw/2.5,
-  innerw/6,
+  (innerw - innerw / 2.5) / 2,
+  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150 + innerh / 1.7,
+  innerw - innerw / 2.5,
+  innerw / 6,
   {
     density: 0.025,
     chamfer: { radius: 15 },
@@ -219,11 +219,11 @@ var body4 = Bodies.rectangle(
 
 var constraint2 = Constraint.create({
   pointA: {
-    x: innerw - innerw/5 - (innerw - innerw/5)/2 -innerw/50,
-    y: 2 * innerh + innerh / 9 + innerh / 2 + 405 + 150,
+    x: innerw - innerw / 5 - (innerw - innerw / 5) / 2 - innerw / 50,
+    y: 2 * innerh + innerh / 9 + innerh / 2 + innerh / 1 - innerh / 10,
   },
   bodyB: body4,
-  pointB: { x: -20 , y: -innerw/16 },
+  pointB: { x: -20, y: -innerw / 16 },
   stiffness: 0.001,
   damping: 0.05,
 });
@@ -233,10 +233,17 @@ Composite.add(engine.world, [body4, constraint2]);
 // ________________________part 2______________________________
 
 var body4 = Bodies.rectangle(
-  (innerw - innerw/2.5)/2,
-  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150 + innerh / 4 + innerh/3 + innerh/12,
-  innerw - innerw/2,
-  innerh/12,
+  (innerw - innerw / 2.5) / 2,
+  innerh * 2 +
+    innerh / 9 +
+    innerh / 4 +
+    405 +
+    150 +
+    innerh / 4 +
+    innerh / 3 +
+    innerh / 12,
+  innerw - innerw / 2 + 60,
+  innerh / 12,
   {
     density: 0.025,
     chamfer: { radius: 15 },
@@ -256,11 +263,18 @@ var body4 = Bodies.rectangle(
 
 var constraint2 = Constraint.create({
   pointA: {
-    x: innerw  - (innerw - innerw/5)/2 -innerw/50,
-    y: 2 * innerh + innerh / 9 + innerh / 2 + 405 + 150 + innerh/3,
+    x: innerw - (innerw - innerw / 5) / 2 - innerw / 50,
+    y:
+      2 * innerh +
+      innerh / 9 +
+      innerh / 2 +
+      405 +
+      150 +
+      innerh / 3 +
+      innerh / 8,
   },
   bodyB: body4,
-  pointB: { x: -20 , y: -innerw/16 },
+  pointB: { x: 10, y: -innerw / 16 },
   stiffness: 0.001,
   damping: 0.05,
 });
@@ -333,7 +347,7 @@ Composite.add(engine.world, [body, constraint1, constraint2]);
 
 var body = Bodies.rectangle(
   innerw / 2 + 7 / 2,
-  innerh + 150 + innerh / 2.5 - 40 + innerh / 4 -70 +30,
+  innerh + 150 + innerh / 2.5 - 40 + innerh / 4 - 70 + 30,
   355,
   405,
   {
@@ -368,8 +382,8 @@ Composite.add(engine.world, [body, constraint1, constraint2]);
 // ___________________________________card3_____________________________________
 
 var body = Bodies.rectangle(
-  innerw / 2 ,
-  innerh  + innerh + innerh/2 -70 -70 +70,
+  innerw / 2,
+  innerh + innerh + innerh / 2 - 70 - 70 + 70,
   355,
   405,
   {
@@ -384,7 +398,7 @@ var body = Bodies.rectangle(
 );
 
 var c3constraint1 = Constraint.create({
-  pointA: { x: 20 + 10, y: innerh + innerh / 10 + innerh -70},
+  pointA: { x: 20 + 10, y: innerh + innerh / 10 + innerh - 70 },
   bodyB: body,
   pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
   stiffness: 0.001,
@@ -392,20 +406,20 @@ var c3constraint1 = Constraint.create({
 });
 
 var c3constraint2 = Constraint.create({
-  pointA: { x: innerw -20, y: innerh + innerh / 10 + innerh -70},
+  pointA: { x: innerw - 20, y: innerh + innerh / 10 + innerh - 70 },
   bodyB: body,
   pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
   stiffness: 0.001,
   damping: 0.05,
 });
 
-Composite.add(engine.world, [body, c3constraint1,c3constraint2]);
+Composite.add(engine.world, [body, c3constraint1, c3constraint2]);
 
 // ___________________________________card4_____________________________________
 
 var body4 = Bodies.rectangle(
   innerw / 2 + 7 / 2,
-  innerh * 3 + innerh/5 -70 -70 -70 + 110,
+  innerh * 3 + innerh / 5 - 70 - 70 - 70 + 110,
   355,
   405,
   {
@@ -424,7 +438,7 @@ var constraint1 = Constraint.create({
   // pointA: { x: innerw - (innerw / 3.5 - 355 / 2 + 300), y: innerh + innerh / 9 },
   pointA: {
     x: 20 + 10,
-    y: innerh + innerh + innerh/1.5 +  innerh/5 -70 -70 -70,
+    y: innerh + innerh + innerh / 1.5 + innerh / 5 - 70 - 70 - 70,
   },
   bodyB: body4,
   pointB: { x: -355 / 2 + 30, y: -405 / 2 + 20 },
@@ -435,7 +449,7 @@ var constraint1 = Constraint.create({
 var constraint2 = Constraint.create({
   pointA: {
     x: innerw - 20,
-    y: innerh + innerh + innerh/1.5  +  innerh/5 -70 -70 -70,
+    y: innerh + innerh + innerh / 1.5 + innerh / 5 - 70 - 70 - 70,
   },
   bodyB: body4,
   pointB: { x: 355 / 2 - 30, y: -405 / 2 + 20 },
