@@ -192,6 +192,44 @@ let ground = Bodies.rectangle(innerw / 2, innerh - 15, innerw, 30, {
 // add all of the bodies to the world
 // Composite.add(engine.world, [ground]);
 
+// ________________________second last page____________________________
+// ________________________second last page____________________________
+
+var body4 = Bodies.rectangle(
+  (innerw - innerw/2.5)/2,
+  innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150 + innerh / 4 ,
+  innerw - innerw/2.5,
+  innerw/8,
+  {
+    density: 0.025,
+    chamfer: { radius: 15 },
+  }
+);
+
+// var constraint1 = Constraint.create({
+//   pointA: {
+//     x: innerw/10 -30 ,
+//     y: innerh * 2 + innerh / 9 + innerh / 4 + 405 + 150,
+//   },
+//   bodyB: body4,
+//   pointB: { x: - (innerw - innerw/5)/2 + 30, y: -innerw/16 },
+//   stiffness: 0.001,
+//   damping: 0.05,
+// });
+
+var constraint2 = Constraint.create({
+  pointA: {
+    x: innerw - innerw/5 - (innerw - innerw/5)/2 -innerw/50,
+    y: 2 * innerh + innerh / 9 + innerh / 2 + 405 + 150,
+  },
+  bodyB: body4,
+  pointB: { x: -20 , y: -innerw/16 },
+  stiffness: 0.001,
+  damping: 0.05,
+});
+
+Composite.add(engine.world, [body4, constraint2]);
+
 // ________________________new codes____________________________
 // ________________________new codes____________________________
 // ________________________new codes____________________________
