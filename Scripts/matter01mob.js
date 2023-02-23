@@ -102,10 +102,10 @@ Composite.add(engine.world, [
     { isStatic: true, chamfer: { radius: [60, 60, 0, 0] } }
   ),
   //   left right
-  Bodies.rectangle(innerw, (innerh * 5) / 2 + 550, 5, innerh * 5 - 500, {
+  Bodies.rectangle(innerw, (innerh * 5) / 2 + 10, 5, innerh * 4 - innerh/1.1, {
     isStatic: true,
   }),
-  Bodies.rectangle(0, (innerh * 5) / 2 + 550, 5, innerh * 5 - 500, {
+  Bodies.rectangle(0, (innerh * 5) / 2 + 10, 5, innerh * 4 - innerh/1.1, {
     isStatic: true,
   }),
 ]);
