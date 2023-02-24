@@ -154,6 +154,7 @@ li button {
     background-color: #FFD600;
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
 li button i {
@@ -244,8 +245,8 @@ button:active {
     background-color: #e817171e;
 }
 
-.yellow span{
-   color: #e3be03;
+.yellow span {
+    color: #e3be03;
 }
 
 .chooseus {
@@ -270,6 +271,44 @@ button:active {
     margin-left: 1.7vmax;
 }
 
+.movieinput {
+    width: 170px;
+    /* margin-right: 4%; */
+    height: 35px;
+    background-color: #262626;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: rgb(250, 250, 250);
+    padding: 4px 16px 3px 16px;
+    padding-left: 8%;
+    background-image: url('../assets/search_Icon.png');
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 5% 50%;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.81) inset;
+    -webkit-box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.81) inset;
+    -moz-box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.81) inset;
+}
+
+.movieinput::placeholder{
+    font-family: gilroy;
+    color: rgb(199, 199, 199);
+    /* margin-left: 90px; */
+}
+
+.liendnew{
+    margin-left: 2px;
+    color: rgb(250, 250, 250);
+    padding-top: 2.5px;
+}
+
+.liendnew a{
+    font-weight: 550;
+}
 
 /* _____________________________last section______________________________ */
 
@@ -453,7 +492,7 @@ button:active {
 
 
     /* _____________chose________________ */
-    .chooseus{
+    .chooseus {
         padding-top: 15vh;
         height: 45vh;
     }
