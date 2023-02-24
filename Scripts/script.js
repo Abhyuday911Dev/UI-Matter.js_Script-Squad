@@ -129,11 +129,11 @@ window.addEventListener('wheel', function(event) {
   const isScrollingDown = currentScrollPos > lastScrollPos;
   const isScrollingUp = currentScrollPos < lastScrollPos;
 
-  console.log(window , event);
-  console.log(currentScrollPos , lastScrollPos);
+  // console.log(window , event);
+  // console.log(currentScrollPos , lastScrollPos);
   
   if (isScrollingDown) {
-    console.log('Scrolling Down');
+    // console.log('Scrolling Down');
     // document.querySelector("nav").style.top = "0%";
     gsap.to("nav", {
       y: `-100%`,
