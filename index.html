@@ -15,7 +15,7 @@
   <script>
     function isMobileDevicee() {
       return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    }
+    } 
 
     if (isMobileDevicee()) {
       var script = document.createElement('script');
@@ -28,8 +28,24 @@
       document.head.appendChild(script);
     };
   </script>
+  <!-- <script>
+    function isMobileDevicee() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    if (isMobileDevicee()) {
+      var script = document.createElement('script');
+      script.src = './Scripts/m01mobtest1.js';
+      document.head.appendChild(script);
+    } else {
+      // If the device is not mobile, load desktop.js script file
+      var script = document.createElement('script');
+      script.src = './Scripts/m01test1.js';
+      document.head.appendChild(script);
+    };
+  </script> -->
   <title>Script_Squad</title>
-</head>
+</head> 
 
 <body>
   <div id="main">
@@ -66,6 +82,7 @@
       <div class="slide"></div>
       <div class="slide"></div>
       <div class="slide triggerslide"></div>
+      <div class="slide"></div>
       <div id="contactslide" class="slide">
         <div id="contact">
           <div id="contact-left">
