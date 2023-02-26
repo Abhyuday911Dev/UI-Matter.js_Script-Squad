@@ -323,7 +323,7 @@ button:active {
     border-radius: 140px 140px 0 0;
     width: 100%;
     padding: 60px 60px 60px 60px;
-    background-color: #ffffff39;
+    background-color: #57585F;
     pointer-events: all;
     border: 30px #222222 solid;
     display: flex;
@@ -349,6 +349,7 @@ button:active {
 
 #contact-right h3 {
     padding-bottom: 5%;
+    font-size: 2vmax;
 }
 
 #teampng {
@@ -367,7 +368,7 @@ button:active {
 }
 
 #hippobtn {
-    width: 242px;
+    width: min(30vmax,240px);
     border: 0;
     padding: 0;
     background: transparent;
@@ -416,7 +417,7 @@ button:active {
 .tooth-right {
     fill: #FFFFE1;
 }
-
+/* 
 .link {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -429,12 +430,12 @@ button:active {
     border: 2px solid #335067;
     padding: 10px 14px;
     border-radius: 4px;
-    /* transition: background 0.2s; */
+    transition: background 0.2s;
 }
 
 .link:hover {
     background: #243a4a;
-}
+} */
 
 
 @media screen and (max-width:500px) {
