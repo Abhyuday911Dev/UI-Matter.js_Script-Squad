@@ -1,4 +1,3 @@
-# UI-Matter.js_Script-Squad
-A website made for Codebite2K23 
+# UI-Matter.js_Gilque
 
 Link to the site: https://script-squad.netlify.app/
