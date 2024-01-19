@@ -331,7 +331,7 @@ button:active {
 }
 
 #contact-left {
-    /* width: 57%; */
+    width: 100%;
     background-color: #ffffff15;
     padding: 15px;
     border-radius: 35px;
